@@ -1,0 +1,140 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #2c3e50 0%, #4c5c68 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.container {
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.15);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 0.8s ease forwards;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 28px;
+    color: #ececec;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    font-size: 14px;
+    color: #c7c7c7;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon i {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #ececec;
+    font-size: 16px;
+}
+
+input[type="email"], 
+input[type="password"] {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+    color: #ececec;
+    transition: all 0.4s ease;
+}
+
+input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button i {
+    margin-right: 8px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #2980b9 0%, #34495e 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.8);
+}
+
+.error-list {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input[type="email"], 
+    input[type="password"], 
+    button {
+        padding: 10px;
+    }
+}

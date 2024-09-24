@@ -1,0 +1,173 @@
+/* Body Style */
+body {
+    background: linear-gradient(135deg, #2c3e50 0%, #4c5c68 100%);
+    font-family: 'Poppins', sans-serif;
+    color: #ececec;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    margin-top: 50px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 0.7s ease-in-out forwards;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Heading */
+h2 {
+    color: #ececec;
+    margin-bottom: 20px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 28px;
+}
+
+h3 {
+    color: #ececec;
+    font-size: 22px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Modern Table */
+table {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #3498db;
+}
+
+thead th {
+    text-align: left;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+thead th:hover {
+    background: rgba(52, 152, 219, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Body */
+tbody {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+tbody tr {
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+tbody tr:hover {
+    background: rgba(52, 152, 219, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+tbody td {
+    color: #ececec;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Remove border for last row */
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    input#searchBar {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Buttons */
+button {
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+button.btn-primary {
+    background-color: #4c8bf5;
+    border: none;
+}
+
+button.btn-primary:hover {
+    background-color: #3578e5;
+}
+
+button.btn-danger {
+    background-color: #e74c3c;
+    border: none;
+}
+
+button.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+/* Search Bar */
+.search-form {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input#searchBar {
+    flex: 1;
+    margin-right: 10px;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+/* Dropdown */
+select#tableSelector {
+    width: 200px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
